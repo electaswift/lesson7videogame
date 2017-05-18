@@ -87,8 +87,7 @@
                                 <state key="normal" title="Delete"/>
                                 <connections>
                                     <action selector="addCharacter:" destination="gzK-p2-ByL" eventType="touchUpInside" id="XTQ-YT-LlD"/>
-                                    <action selector="deleteLabel:" destination="gzK-p2-ByL" eventType="touchUpInside" id="jOm-xb-ECN"/>
-                                    <action selector="deleteTapped:" destination="gzK-p2-ByL" eventType="touchUpInside" id="50h-MT-6EZ"/>
+                                    <action selector="deleteLabel:" destination="gzK-p2-ByL" eventType="touchUpInside" id="X15-Vf-uNL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -125,7 +124,6 @@
                         <outlet property="characterTextField" destination="B9m-Xv-IUO" id="COh-zd-205"/>
                         <outlet property="deleteLabel" destination="Xz3-VY-b68" id="fAz-De-ql9"/>
                         <outlet property="updateLabel" destination="mB4-Nc-ZcI" id="tux-z4-gFV"/>
-                        <outletCollection property="deleteButton" destination="Xz3-VY-b68" collectionClass="NSMutableArray" id="vTG-wF-PaF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pSR-CD-emE" userLabel="First Responder" sceneMemberID="firstResponder"/>

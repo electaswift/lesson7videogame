@@ -77,24 +77,29 @@ class AddCharacterViewController: UIViewController, UIImagePickerControllerDeleg
     
     
     @IBAction func cameraTapped(_ sender: Any) {        //10th
+         imagePicker.sourceType = .camera    //53rd
+        
+    //54th  click on info.plist. information property list. plus button.  privacy camera usage. 
+        
+        
     }
     
     
     @IBAction func addCharacter(_ sender: Any) {// 10th
         
-        if character != nil {   //51st 
+        if character != nil {   //51st
             character!.name = characterTextField.text
             character!.image = UIImagePNGRepresentation(characterImageView.image!)! as NSData
             
             
             
         } else {
-        
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext              //20th
-        
-        let character = Character(context: context)   //21st
-        character.name = characterTextField.text
-        character.image = UIImagePNGRepresentation(characterImageView.image!)! as NSData    //changing the nsdata to UIimage view
+            
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext              //20th
+            
+            let character = Character(context: context)   //21st
+            character.name = characterTextField.text
+            character.image = UIImagePNGRepresentation(characterImageView.image!)! as NSData    //changing the nsdata to UIimage view
             
         }
         
@@ -103,15 +108,26 @@ class AddCharacterViewController: UIViewController, UIImagePickerControllerDeleg
         
         navigationController!.popViewController(animated: true)
         
-}
-    
-    
-
-        
     }
-
-
     
+    
+    
+    @IBAction func deleteLabel(_ sender: Any) {   //52nd  use same action title as the outlet above
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        context.delete(character!)
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        
+        navigationController!.popViewController(animated: true)
+    }
+    
+    
+}
+
+
+
 
 
 
